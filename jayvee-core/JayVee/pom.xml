@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.github.westonpace.jayvee</groupId>
+  <artifactId>jayvee-core</artifactId>
+  <version>0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  
+  <name>JayVee Vision Library (Core Package)</name>
+  <description>
+  The JayVee vision library is a computer vision library written
+  completely in Java and designed to be a foolproof, performant, high quality
+  computer vision library.
+  </description>
+  <url>http://westonpace.github.io/jayvee/</url>
+  
+  <licenses>
+    <license>
+      <name>GNU General Public License Version 3 (GPLv3)</name>
+      <url>http://www.gnu.org/licenses/gpl.txt</url>
+    </license>
+  </licenses>
+  
+   <scm>
+       <connection>scm:git:git@github.com:westonpace/jayvee.git</connection>
+       <developerConnection>scm:git:git@github.com:westonpace/jayvee.git</developerConnection>
+       <url>http://github.com/westonpace/jayvee/tree/master</url>
+       <tag>HEAD</tag>
+   </scm>
+  
+  <developers>
+    <developer>
+      <id>westonpace</id>
+      <name>Weston Pace</name>
+      <email>weston.pace@gmail.com</email>
+    </developer>
+  </developers>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+  	<dependency>
+  		<groupId>log4j</groupId>
+  		<artifactId>log4j</artifactId>
+  		<version>1.2.17</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>junit</groupId>
+  		<artifactId>junit</artifactId>
+  		<version>4.11</version>
+  		<scope>test</scope>
+  	</dependency>
+  </dependencies>
+</project>
