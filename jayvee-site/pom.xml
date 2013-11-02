@@ -4,7 +4,7 @@
 
 	<groupId>com.ptank.jayvee</groupId>
 	<artifactId>jayvee-site</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<url>${site.url}</url>
 
@@ -36,14 +36,6 @@
 		<repositoryName>jayvee</repositoryName>
 		<repositoryOwner>westonpace</repositoryOwner>
 	</properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.github.westonpace.jayvee</groupId>
-            <artifactId>jayvee-core</artifactId>
-            <version>0.1-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
 
 	<build>
 		<plugins>
@@ -106,15 +98,5 @@
 		</plugins>
 
 	</build>
-
-	<reporting>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.9.1</version>
-			</plugin>
-		</plugins>
-	</reporting>
 
 </project>

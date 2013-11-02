@@ -1,0 +1,9 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.github.westonpace.jayvee</groupId>
+  <artifactId>jayvee-parent</artifactId>
+  <version>0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>Jayvee Parent POM</name>
+  <description>If you are a user of JayVee then you don't care about this project.  If you are a developer of JayVee then you only care about this project if you are modifying the build process and if so you already know the purpose of this module.</description>
+</project>

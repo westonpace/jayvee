@@ -12,7 +12,7 @@
   completely in Java and designed to be a foolproof, performant, high quality
   computer vision library.
   </description>
-	<url>http://westonpace.github.io/jayvee/</url>
+	<url>http://westonpace.github.io/jayvee/jayvee-core</url>
 
 	<licenses>
 		<license>
@@ -54,6 +54,7 @@
 					<execution>
 						<goals>
 							<goal>jar</goal>
+							<goal>aggregate</goal>
 						</goals>
 					</execution>
 				</executions>

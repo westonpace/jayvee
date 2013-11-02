@@ -4,36 +4,43 @@ import com.pace.jayvee.image.Interpolator.BilinearInterpolator;
 import com.pace.jayvee.util.Sinkerator;
 
 /**
+ * <p>
  * An image is a 2 dimensional array of pixels.  The pixels are laid out in a grid
  * with the horizontal direction being the x dimension and the vertical direction
  * being the y dimension.
- * 
+ * </p>
+ * <h3>Bands</h3>
+ * <p>
  * A pixel is an array of doubles.  For example, a color pixel would be an array 
  * of size 3, one double for red, one double for green, and one double for blue.  
  * A grayscale image would have a pixel which is just a single double.  The different
  * values in a pixel are referred to as bands.  For example, a color image has a red
  * band, a green band, and a blue band where a gray image has only the gray band. 
- *
+ * </p>
+ * <h3>Interpolation</h3>
+ * <p>
  * Image values can be accessed by integer coordinates as well as double coordinates.
  * If you access the image with double coordinates then the pixels closest to the point
  * you desire will be interpolated to provide the resulting value.
- * 
+ * </p>
+ * <h3>Pixel Order</h3>
+ * <p>
  * Images can also return the values as a single array packed according to some kind
  * of pixel order.  If you had a 3x3 image like so:
- * 
+ * </p><p>
  *      1 2 3
  *      4 5 6
  *      7 8 9
- *      
+ * </p><p>
  * where each item is a pixel of (A,B,C).  Then if you get an iterator with row major
  * order (x first, then y) you will receive:
- * 
+ * </p><p>
  *     1A 1B 1C 2A 2B 2C 3A 3B 3C 4A ...
- *     
+ * </p><p>
  * and if you get an iterator with column major order (y first, then x) you will receive:
- * 
+ * </p><p>
  *     1A 1B 1C 4A 4B 4C 7A 7B 7C 2A ...
- *     
+ * </p>
  */
 public abstract class Image {
 
