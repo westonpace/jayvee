@@ -1,9 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.github.westonpace.jayvee</groupId>
 	<artifactId>jayvee-core</artifactId>
-	<version>0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>JayVee Vision Library (Core Package)</name>
@@ -72,6 +70,11 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+			    <!-- Configured in jayvee-parent, we need this for javadocs -->
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
@@ -87,4 +90,10 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<parent>
+		<groupId>com.github.westonpace.jayvee</groupId>
+		<artifactId>jayvee-parent</artifactId>
+		<version>0.1-SNAPSHOT</version>
+		<relativePath>../jayvee-parent/pom.xml</relativePath>
+	</parent>
 </project>

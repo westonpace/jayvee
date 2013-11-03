@@ -7,6 +7,7 @@
   <name>Jayvee Aggregator POM</name>
   <description>This is the aggregator POM for the JayVee vision library.  If you are not a developer of the library itself (e.g. you use the library in your projects) then you don't care about this.  Even if you are a JayVee developer, if you are not modifying the build or creating a new module you probably don't care about this.</description>
   <modules>
+    <module>../jayvee-parent</module>
   	<module>../jayvee-core</module>
   	<module>../jayvee-site</module>
   </modules>
@@ -20,6 +21,10 @@
                 <executions>
                     <execution>
                         <id>default-site</id>
+                        <phase>never</phase>
+                    </execution>
+                    <execution>
+                        <id>default-deploy</id>
                         <phase>never</phase>
                     </execution>
                 </executions>
