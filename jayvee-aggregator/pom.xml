@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.westonpace.jayvee</groupId>
 	<artifactId>jayvee-aggregator</artifactId>
-	<version>0.1</version>
+	<version>0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Jayvee Aggregator POM</name>
 	<description>This is the aggregator POM for the JayVee vision library.  If you are not a developer of the library itself (e.g. you use the library in your projects) then you don't care about this.  Even if you are a JayVee developer, if you are not modifying the build or creating a new module you probably don't care about this.</description>
@@ -43,21 +43,6 @@
 				<executions>
 					<execution>
 						<id>default-deploy</id>
-						<phase>never</phase>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apahce.maven.plugins</groupId>
-				<artifactId>maven-release-plugin</artifactId>
-				<version>2.0</version>
-				<executions>
-					<execution>
-						<id>default-prepare</id>
-						<phase>never</phase>
-					</execution>
-					<execution>
-						<id>default-perform</id>
 						<phase>never</phase>
 					</execution>
 				</executions>
