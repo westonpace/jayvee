@@ -5,7 +5,6 @@ import java.io.IOException;
 import org.apache.log4j.ConsoleAppender;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.SimpleLayout;
-import org.junit.Test;
 
 import com.github.westonpace.jayvee.image.io.DirectoryScanner;
 import com.github.westonpace.jayvee.image.io.IncrementingFileCreator;
@@ -27,6 +26,7 @@ public class Grayscaler {
 		ToGrayscale toGrayscale = builder.buildWorker(ToGrayscale.class);
 		IncrementingFileCreator directoryWriter = builder.buildWorker(IncrementingFileCreator.class);
 		ImageIOImageWriter imageWriter = builder.buildWorker(ImageIOImageWriter.class);
+		@SuppressWarnings("unchecked")
 		ConstantSource<String> formatSource = builder.buildWorker(ConstantSource.class);
 		
 		formatSource.setValue("bmp");
