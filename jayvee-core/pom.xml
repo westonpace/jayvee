@@ -105,6 +105,6 @@
 		<groupId>com.github.westonpace.jayvee</groupId>
 		<artifactId>jayvee-parent</artifactId>
 		<version>0.1-SNAPSHOT</version>
-		<relativePath>../jayvee-parent/pom.xml</relativePath>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 </project>
