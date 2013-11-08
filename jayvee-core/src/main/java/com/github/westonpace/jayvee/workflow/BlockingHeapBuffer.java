@@ -62,7 +62,7 @@ class BlockingHeapBuffer<T> implements Buffer<T> {
 	@Override
 	public synchronized T pop() {
 		try {
-			while(!finished) {
+			while(!finished || !queue.isEmpty()) {
 				T result = queue.poll();
 				if(result != null) {
 					notifyAll();

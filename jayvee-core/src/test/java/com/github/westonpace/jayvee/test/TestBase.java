@@ -5,22 +5,24 @@ import java.io.InputStream;
 import org.apache.log4j.ConsoleAppender;
 import org.apache.log4j.Level;
 import org.apache.log4j.LogManager;
-import org.junit.BeforeClass;
+import org.apache.log4j.SimpleLayout;
+import org.junit.Assert;
+import org.junit.Before;
 
 import com.github.westonpace.jayvee.image.Image;
 import com.github.westonpace.jayvee.image.io.jse.ImageIOImageReader;
 
 public class TestBase {
 
-	private static boolean loggingSquelched = false;
+	@Before
+	public void squelchLogging() {
+		LogManager.getRootLogger().removeAllAppenders();
+		LogManager.getRootLogger().addAppender(new ConsoleAppender(new SimpleLayout()));
+		LogManager.getRootLogger().setLevel(getLoggingLevel());
+	}
 	
-	@BeforeClass
-	public static void squelchLogging() {
-		if(!loggingSquelched) {
-			LogManager.getRootLogger().addAppender(new ConsoleAppender());
-			LogManager.getRootLogger().setLevel(Level.ERROR);
-			loggingSquelched = true;
-		}
+	protected Level getLoggingLevel() {
+		return Level.ERROR;
 	}
 	
 	private InputStream getTestImageAsStream(String testImageName) {
@@ -62,6 +64,20 @@ public class TestBase {
 			buffer.push(value);
 		}
 		return buffer;
+	}
+
+	protected void assertEquals(Image expected, Image image, double delta) {
+		Assert.assertEquals(expected.getWidth(), image.getWidth());
+		Assert.assertEquals(expected.getHeight(), image.getHeight());
+		Assert.assertEquals(expected.getNumBands(), image.getNumBands());
+		
+		for(int y = 0; y < expected.getHeight(); y++) {
+			for(int x = 0; x < expected.getWidth(); x++) {
+				for(int b = 0; b < expected.getNumBands(); b++) {
+					Assert.assertEquals("Incorrect pixel value at (" + x + "," + y + "," + b + ")", expected.get(x, y, b), image.get(x, y, b), delta);
+				}
+			}
+		}
 	}
 	
 }

@@ -1,5 +1,7 @@
 package com.github.westonpace.jayvee.image.worker;
 
+import org.apache.log4j.Logger;
+
 import com.github.westonpace.jayvee.image.Image;
 import com.github.westonpace.jayvee.image.StandardImage;
 import com.github.westonpace.jayvee.workflow.InputBuffer;
@@ -21,6 +23,8 @@ import com.github.westonpace.jayvee.workflow.Worker;
  */
 public abstract class ImageTransformer implements Worker {
 
+	private static final Logger logger = Logger.getLogger(ImageTransformer.class);
+	
 	/**
 	 * The images that will be transformed by the transformer.  There is no requirement
 	 * on the structure or form of these images.  Subclasses should inspect the images
@@ -45,6 +49,7 @@ public abstract class ImageTransformer implements Worker {
 	public void iterate() {
 		Image input = inputImages.pop();
 		Image output = buildOutputImage(input);
+		logger.debug("Transforming input image (" + input.getWidth() + "x" + input.getHeight() + "x" + input.getNumBands() + ") into (" + output.getWidth() + "x" + output.getHeight() + "x" + output.getNumBands() + ")");
 		transform(input, output);
 		outputImages.push(output);
 	}
