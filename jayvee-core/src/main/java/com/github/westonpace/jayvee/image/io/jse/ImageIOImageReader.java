@@ -16,7 +16,7 @@ import com.github.westonpace.jayvee.workflow.InputBuffer;
 import com.github.westonpace.jayvee.workflow.OutputBuffer;
 import com.github.westonpace.jayvee.workflow.Sink;
 import com.github.westonpace.jayvee.workflow.Source;
-import com.github.westonpace.jayvee.workflow.Worker;
+import com.github.westonpace.jayvee.workflow.StandardWorker;
 
 /**
  * Uses Java's ImageIO library to read in images from
@@ -34,7 +34,7 @@ import com.github.westonpace.jayvee.workflow.Worker;
  * 
  * TODO: Support all image formats
  */
-public class ImageIOImageReader implements Worker {
+public class ImageIOImageReader extends StandardWorker {
 
 	/**
 	 * This sink receives the images that are read in by this reader.  This reader

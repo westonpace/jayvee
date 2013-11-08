@@ -26,7 +26,6 @@ public class DirectCallBuffer<T> implements Buffer<T> {
 	@Override
 	public void end() {
 		finished = true;
-		throw new BufferEndedException();
 	}
 
 	@Override
@@ -40,9 +39,4 @@ public class DirectCallBuffer<T> implements Buffer<T> {
 		return temporaryBuffer.poll();
 	}
 
-	@Override
-	public void safeEnd() {
-		this.finished = true;
-	}
-	
 }

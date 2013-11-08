@@ -9,7 +9,7 @@ import com.github.westonpace.jayvee.image.Image;
 import com.github.westonpace.jayvee.util.J2SEUtils;
 import com.github.westonpace.jayvee.workflow.InputBuffer;
 import com.github.westonpace.jayvee.workflow.Source;
-import com.github.westonpace.jayvee.workflow.Worker;
+import com.github.westonpace.jayvee.workflow.StandardWorker;
 
 /**
  * Uses the standard Java ImageIO library to write out an image to an output
@@ -30,7 +30,7 @@ import com.github.westonpace.jayvee.workflow.Worker;
  * 
  * TODO: Improve image writing performance and memory usage
  */
-public class ImageIOImageWriter implements Worker {
+public class ImageIOImageWriter extends StandardWorker {
 
 	/**
 	 * This source takes in the images that will actually be written.  They must be

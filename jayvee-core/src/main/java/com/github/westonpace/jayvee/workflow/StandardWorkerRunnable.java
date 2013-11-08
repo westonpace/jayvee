@@ -39,6 +39,10 @@ class StandardWorkerRunnable implements WorkerRunnable {
 		while(!finished) {
 			try {
 				worker.iterate();
+				if(worker.isEnded()) {
+					logger.debug("Stopping runner (worker singalled it was finished) for: " + worker.getClass().getSimpleName());
+					stop();
+				}
 			} catch (BufferEndedException ex) {
 				//Thrown when one of the source buffers ends or this worker
 				//marked a sink ended.

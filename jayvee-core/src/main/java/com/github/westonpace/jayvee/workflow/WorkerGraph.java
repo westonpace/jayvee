@@ -67,7 +67,7 @@ class WorkerGraph {
 	public void poisonEdges(WorkerRunnable worker) {
 		WorkerGraphNode node = graph.get(worker);
 		for(WorkerGraphEdge edge : node.edges) {
-			edge.edge.safeEnd();
+			edge.edge.end();
 		}
 	}
 	

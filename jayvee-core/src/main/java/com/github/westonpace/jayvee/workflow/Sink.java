@@ -27,9 +27,14 @@ public interface Sink<T> {
 	public void push(T value);
 	
 	/**
+	 * <p>
 	 * Inserts an 'end' item into a sink.  Once ended a sink is no longer usable.
 	 * Once the other side reads the end item they will know that there is no more data
-	 * being sent.
+	 * being sent.  
+	 * </p><p>
+	 * This should not be called by workers, workers should set isEnded
+	 * to true instead.
+	 * </p>
 	 */
 	public void end();
 	

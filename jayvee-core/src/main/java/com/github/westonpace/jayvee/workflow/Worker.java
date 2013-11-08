@@ -51,18 +51,28 @@ package com.github.westonpace.jayvee.workflow;
  * A stateful worker will, of course, have an ordered output
  * </p>
  */
-public interface Worker {
+public abstract interface Worker {
 
 	/**
 	 * Runs through one pass of this worker, retrieving files from sources, transforming
 	 * them, and writing the result out to sinks.
 	 */
-	public void iterate();
+	public abstract void iterate();
 	
 	/**
 	 * Initializes the worker.  This will be called once all sources and sinks have been
 	 * connected and all parameters have been set.
 	 */
-	public void init();
+	public abstract void init();
+	
+	/**
+	 * Checks to see if a worker is finished and can no longer iterate.  Most 
+	 * subclasses can always return true as they will end automatically when they
+	 * try to pull from an input buffer and get an BufferEndedException.  This should only
+	 * be needed for something like a source which has realized that its native input has
+	 * run dry.  For example, the DirectoryScanner signals this when there are no more files
+	 * that it can process.
+	 */
+	public abstract boolean isEnded();
 	
 }

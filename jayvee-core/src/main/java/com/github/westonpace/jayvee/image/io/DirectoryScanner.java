@@ -12,7 +12,7 @@ import org.apache.log4j.Logger;
 import com.github.westonpace.jayvee.util.InvalidParameterException;
 import com.github.westonpace.jayvee.workflow.OutputBuffer;
 import com.github.westonpace.jayvee.workflow.Sink;
-import com.github.westonpace.jayvee.workflow.Worker;
+import com.github.westonpace.jayvee.workflow.StandardWorker;
 
 /**
  * <p>
@@ -38,7 +38,7 @@ import com.github.westonpace.jayvee.workflow.Worker;
  * TODO: Enhance this class to take in a custom comparator
  * </p>
  */
-public class DirectoryScanner implements Worker {
+public class DirectoryScanner extends StandardWorker {
 
 	private static final Logger logger = Logger.getLogger(DirectoryScanner.class);
 	
@@ -128,7 +128,7 @@ public class DirectoryScanner implements Worker {
 				logger.trace("Stack trace", ex);
 			}
 		} else {
-			generatedInputStreams.end();
+			end();
 		}
 	}
 	

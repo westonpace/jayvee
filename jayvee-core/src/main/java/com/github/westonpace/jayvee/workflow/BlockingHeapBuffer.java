@@ -86,7 +86,7 @@ class BlockingHeapBuffer<T> implements Buffer<T> {
 	 * 
 	 * This method exists as a way to end a buffer without getting an exception.
 	 */
-	public synchronized void safeEnd() {
+	private synchronized void safeEnd() {
 		//TODO: This is ugly and contentious
 		finished = true;
 		notifyAll();
@@ -98,7 +98,6 @@ class BlockingHeapBuffer<T> implements Buffer<T> {
 	 */
 	public void end() {
 		safeEnd();
-		throw new BufferEndedException();
 	}
 	
 }

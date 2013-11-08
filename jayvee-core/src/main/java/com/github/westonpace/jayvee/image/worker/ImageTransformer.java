@@ -8,7 +8,7 @@ import com.github.westonpace.jayvee.workflow.InputBuffer;
 import com.github.westonpace.jayvee.workflow.OutputBuffer;
 import com.github.westonpace.jayvee.workflow.Sink;
 import com.github.westonpace.jayvee.workflow.Source;
-import com.github.westonpace.jayvee.workflow.Worker;
+import com.github.westonpace.jayvee.workflow.StandardWorker;
 
 /**
  * Modifies an existing image an turns it into a new image of the
@@ -21,7 +21,7 @@ import com.github.westonpace.jayvee.workflow.Worker;
  * on a subclass to do the actual transformation.  Some subclasses may choose to modify
  * the image in place.
  */
-public abstract class ImageTransformer implements Worker {
+public abstract class ImageTransformer extends StandardWorker {
 
 	private static final Logger logger = Logger.getLogger(ImageTransformer.class);
 	

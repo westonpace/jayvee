@@ -3,7 +3,7 @@ package com.github.westonpace.jayvee.util;
 import com.github.westonpace.jayvee.workflow.OnRequestOnly;
 import com.github.westonpace.jayvee.workflow.OutputBuffer;
 import com.github.westonpace.jayvee.workflow.Sink;
-import com.github.westonpace.jayvee.workflow.Worker;
+import com.github.westonpace.jayvee.workflow.StandardWorker;
 
 /**
  * Spits out a given constant value over and over.  It can be useful whenever you want to 
@@ -11,7 +11,7 @@ import com.github.westonpace.jayvee.workflow.Worker;
  * value forever it operates in a @OnRequestOnly fashion.
  */
 @OnRequestOnly
-public class ConstantSource<T> implements Worker {
+public class ConstantSource<T> extends StandardWorker {
 
 	/**
 	 * The buffer which will be outputting the constant value given to this source.

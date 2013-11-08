@@ -11,7 +11,7 @@ import com.github.westonpace.jayvee.util.InvalidParameterException;
 import com.github.westonpace.jayvee.workflow.OnRequestOnly;
 import com.github.westonpace.jayvee.workflow.OutputBuffer;
 import com.github.westonpace.jayvee.workflow.Sink;
-import com.github.westonpace.jayvee.workflow.Worker;
+import com.github.westonpace.jayvee.workflow.StandardWorker;
 
 /**
  * Creates output streams to files in a given directory
@@ -24,7 +24,7 @@ import com.github.westonpace.jayvee.workflow.Worker;
  * to have an extension make sure to include a . in the suffix. (e.g. ".png")
  */
 @OnRequestOnly
-public class IncrementingFileCreator implements Worker {
+public class IncrementingFileCreator extends StandardWorker {
 
 	private static final Logger logger = Logger.getLogger(DirectoryScanner.class);
 
