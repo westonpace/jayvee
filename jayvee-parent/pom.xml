@@ -8,6 +8,14 @@
 	<name>Jayvee Parent POM</name>
 	<description>If you are a user of JayVee then you don't care about this project.  If you are a developer of JayVee then you only care about this project if you are modifying the build process and if so you already know the purpose of this module.</description>
 
+    <url>http://westonpace.github.io/jayvee/${project.artifactId}</url>
+    
+	  <parent>
+	    <groupId>org.sonatype.oss</groupId>
+	    <artifactId>oss-parent</artifactId>
+	    <version>7</version>
+	  </parent>
+    
 	<distributionManagement>
 		<site>
 			<id>${site.deploy.id}</id>

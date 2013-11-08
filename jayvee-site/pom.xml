@@ -4,31 +4,12 @@
 
 	<artifactId>jayvee-site</artifactId>
 	<packaging>pom</packaging>
-	<url>${site.url}</url>
-
-	<distributionManagement>
-		<site>
-			<id>${site.deploy.id}</id>
-			<name>Deployment through GitHub's site deployment plugin</name>
-			<url>${site.deploy.url}</url>
-		</site>
-	</distributionManagement>
-
-	<scm>
-		<connection>scm:git:git@github.com:westonpace/jayvee.git</connection>
-		<developerConnection>scm:git:git@github.com:westonpace/jayvee.git</developerConnection>
-		<url>http://github.com/westonpace/jayvee/tree/master</url>
-		<tag>HEAD</tag>
-	</scm>
+	<url>http://westonpace.github.io/jayvee/site</url>
 
 	<issueManagement>
 		<system>GitHub</system>
 		<url>http://github.com/westonpace/jayvee/issues</url>
 	</issueManagement>
-
-	<properties>
-		<site.url>http://westonpace.github.io/jayvee</site.url>
-	</properties>
 
 	<build>
 		<plugins>
@@ -37,7 +18,7 @@
 				<groupId>com.github.github</groupId>
 				<artifactId>site-maven-plugin</artifactId>
 				<configuration>
-					<path>.</path>
+					<path>site</path>
 				</configuration>
 			</plugin>
 		</plugins>

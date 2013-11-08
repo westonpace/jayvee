@@ -34,7 +34,7 @@
 			<brand>
 				<!-- Brand text in top-left part of the site -->
         <name><![CDATA[
-      <img src="http://westonpace.github.io/jayvee/images/logo_32.png" alt="JV"></img>JayVee
+      <img src="http://westonpace.github.io/jayvee/site/images/logo_32.png" alt="JV"></img>JayVee
       ]]>
         </name>
         <href>/</href>
@@ -104,13 +104,13 @@
 		</breadcrumbs-->
 
 		<menu name="About" inherit="top">
-			<item name="Home" href="http://westonpace.github.io/jayvee/index.html" />
-            <item name="What is JayVee" href="http://westonpace.github.io/jayvee/aboutjv.html" />
-			<item name="FAQ" href="http://westonpace.github.io/jayvee/faq.html" />
+			<item name="Home" href="http://westonpace.github.io/jayvee/site/index.html" />
+            <item name="What is JayVee" href="http://westonpace.github.io/jayvee/site/aboutjv.html" />
+			<item name="FAQ" href="http://westonpace.github.io/jayvee/site/faq.html" />
 		</menu>
 		<menu name="Download" inherit="top">
-			<item name="With Maven" href="http://westonpace.github.io/jayvee/download-maven.html" />
-			<item name="Without Maven" href="http://westonpace.github.io/jayvee/download.html" />
+			<item name="With Maven" href="http://westonpace.github.io/jayvee/site/download-maven.html" />
+			<item name="Without Maven" href="http://westonpace.github.io/jayvee/site/download.html" />
 		</menu>
 		<menu name="Reference" inherit="bottom">
 			<item name="API Reference" href="http://westonpace.github.io/jayvee/apidoc/index.html" />
@@ -119,9 +119,9 @@
 			<item name="Getting Started with JayVee" href="http://westonpace.github.io/jayvee/tutorials/getting-started/index.html" />
 		</menu>
 		<menu name="Contribute" inherit="bottom">
-			<item name="Contribute" href="http://github.com/westonpace/jayvee/" />
-			<item name="Issues" href="https://github.com/westonpace/jayvee/issues" />
-			<item name="Donate" href="http://westonpace.github.io/jayvee/donate.html" />
+			<item name="Contribute" href="http://github.com/westonpace/jayvee" />
+			<item name="Issues" href="https://github.com/westonpace/jayvee/site/issues" />
+			<item name="Donate" href="http://westonpace.github.io/jayvee/site/donate.html" />
 		</menu>
 	</body>
 </project>
