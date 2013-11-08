@@ -30,7 +30,7 @@ public class DirectoryScannerTest extends FilesystemTestBase {
 		
 		scanner.generatedInputStreams = buffer;
 		
-		while(!buffer.isEnded()) {
+		while(!scanner.isEnded()) {
 			scanner.iterate();
 		}
 		
@@ -60,7 +60,7 @@ public class DirectoryScannerTest extends FilesystemTestBase {
 		
 		scanner.generatedInputStreams = buffer;
 		
-		while(!buffer.isEnded()) {
+		while(!scanner.isEnded()) {
 			scanner.iterate();
 		}
 		
