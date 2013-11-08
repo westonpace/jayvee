@@ -9,7 +9,6 @@
   <modules>
     <module>../jayvee-parent</module>
   	<module>../jayvee-core</module>
-  	<module>../jayvee-site</module>
   </modules>
   
   <build>
