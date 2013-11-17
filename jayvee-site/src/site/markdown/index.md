@@ -17,9 +17,9 @@ can download JayVee and all its dependencies [here][download].
 Learn more about [JayVee][about], get started by following our [tutorial][getting-started] 
 or check out our [API][apidoc].
 
-  [getting-started]: tutorials/getting-started/index.html
+  [getting-started]: tutorials/grayscaler/index.html
   [about]: about.html
-  [apidoc]: apidoc/index.html
+  [apidoc]: ../jayvee-core/0.1/apidocs/index.html
 
 ### [![Gear and hammer](images/gear-hammer_40.png)][github] [Contribute][github]
 

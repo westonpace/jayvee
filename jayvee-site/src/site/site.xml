@@ -6,7 +6,7 @@
 	<bannerLeft>
 		<name>
 		</name>
-		<href>/</href>
+		<href>http://westonpace.github.io/jayvee/site/index.html</href>
 	</bannerLeft>
 
 	<publishDate position="bottom" format="yyyy-MM-dd" />
@@ -25,19 +25,18 @@
 	<custom>
 		<reflowSkin>
 			<!-- Make this to 'false' for local development, i.e. file:// URLs -->
-			<protocolRelativeURLs>false</protocolRelativeURLs>
+			<protocolRelativeURLs>true</protocolRelativeURLs>
 			<smoothScroll>true</smoothScroll>
 			<theme>bootswatch-readable</theme>
 			<highlightJs>true</highlightJs>
-			<highlightJsTheme>github</highlightJsTheme>
-			<absoluteResourceURL>http://westonpace.github.io/jayvee</absoluteResourceURL>
+			<absoluteResourceURL>http://westonpace.github.io/jayvee/site</absoluteResourceURL>
 			<brand>
 				<!-- Brand text in top-left part of the site -->
         <name><![CDATA[
       <img src="http://westonpace.github.io/jayvee/site/images/logo_32.png" alt="JV"></img>JayVee
       ]]>
         </name>
-        <href>/</href>
+        <href>http://westonpace.github.io/jayvee/site/index.html</href>
 			</brand>
 			<slogan>Computer Vision Simplified</slogan>
 			<titleTemplate>%2$s | %1$s</titleTemplate>
@@ -88,6 +87,16 @@
 				        <body/>
 				    </sections>
 				</aboutjv>
+				<tutorials-grayscaler-index>
+				    <sections>
+				        <body/>
+				        <sidebar/>
+                        <body/>
+                        <columns>3</columns>
+                        <columns>3</columns>
+                        <columns>1</columns>
+				    </sections>
+				</tutorials-grayscaler-index>
 			</pages>
 		</reflowSkin>
 	</custom>
@@ -113,10 +122,10 @@
 			<item name="Without Maven" href="http://westonpace.github.io/jayvee/site/download.html" />
 		</menu>
 		<menu name="Reference" inherit="bottom">
-			<item name="API Reference" href="http://westonpace.github.io/jayvee/apidoc/index.html" />
+			<item name="API Reference" href="http://westonpace.github.io/jayvee/jayvee-core/0.1/apidocs/index.html" />
 		</menu>
 		<menu name="Tutorials" inherit="bottom">
-			<item name="Getting Started with JayVee" href="http://westonpace.github.io/jayvee/tutorials/getting-started/index.html" />
+			<item name="Getting Started with JayVee" href="http://westonpace.github.io/jayvee/site/tutorials/grayscaler/index.html" />
 		</menu>
 		<menu name="Contribute" inherit="bottom">
 			<item name="Contribute" href="http://github.com/westonpace/jayvee" />
