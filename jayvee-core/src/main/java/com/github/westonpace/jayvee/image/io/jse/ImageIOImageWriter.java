@@ -68,10 +68,5 @@ public class ImageIOImageWriter extends StandardWorker {
 		String format = imageFormats.pop();
 		writeImage(imageToWrite, format, streamToWriteTo);
 	}
-
-	@Override
-	public void init() {
-		
-	}
 	
 }

@@ -25,4 +25,9 @@ public abstract class StandardWorker implements Worker {
 	protected void end() {
 		ended = true;
 	}
+	
+	@Override
+	public void init() {
+		//The default init does nothing
+	}
 }

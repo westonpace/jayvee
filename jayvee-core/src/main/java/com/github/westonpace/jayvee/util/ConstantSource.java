@@ -34,9 +34,4 @@ public class ConstantSource<T> extends StandardWorker {
 		outputSink.push(value);
 	}
 
-	@Override
-	public void init() {
-		
-	}
-
 }

@@ -28,11 +28,6 @@ public class ToGrayscale extends ImageTransformer {
 	}
 
 	@Override
-	public void init() {
-		//No initialization necessary
-	}
-
-	@Override
 	protected int getOutputBands(Image input) {
 		//Regardless of how many bands are passed in we always pass out 1 band
 		return 1;

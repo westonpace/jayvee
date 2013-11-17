@@ -167,9 +167,4 @@ public class ImageIOImageReader extends StandardWorker {
 		generatedImages.push(image);
 	}
 
-	@Override
-	public void init() {
-		//No initialization needed
-	}
-	
 }
