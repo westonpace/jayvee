@@ -328,6 +328,8 @@ public class GrayscaleFilter extends StandardWorker {
  <pre>public class MainClass {
 
     public static void main(String [] args) {
+        LogManager.getRootLogger().addAppender(new ConsoleAppender(new SimpleLayout()));
+        LogManager.getRootLogger().setLevel(Level.INFO);
         SystemBuilder builder = new SystemBuilder();
     }
 
